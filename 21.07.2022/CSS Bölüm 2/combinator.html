@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* div p {
+        background-color: red;
+      } 1.selector */
+
+      /* div > p {
+        background-color: red;
+      } 2. selector */
+      /* div + p {
+        background-color: red;
+      } 3. selector div etiketinden sonra gelen ilk p yi dahil etmiş oluyor */
+
+      div ~ p {
+        background-color: red;
+      } /*  4. selector  */
+    </style>
+  </head>
+  <body>
+    <p>1.paragraf</p>
+    <div>
+      <p>2.paragraf</p>
+      <p>3.paragraf</p>
+      <section>
+        <p>4.paragraf</p>
+      </section>
+    </div>
+    <p>5.paragraf</p>
+    <p>6.paragraf</p>
+    <!-- Combinators -->
+
+    <!-- 1- Descendant Selecto () -->
+    <!-- 2- Child selector(>) -->
+    <!-- 3- Adjacent Sibling Selector(+) -->
+    <!-- 4- General Sibling Selector(~) -->
+  </body>
+</html>
