@@ -7,7 +7,19 @@
     <title>Bitakon - NFT Marketplace Angular Template</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
     />
     <style>
       * {
@@ -16,42 +28,51 @@
       }
       body {
         margin: 0;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
       }
       .main-header {
         background-color: #121636;
-        padding: 20px 15px;
+        padding: 10px 15px;
         color: white;
       }
       .main-nav {
         display: inline-block;
         width: calc(100% - 80px);
         text-align: right;
-        font-size: 16px;
+        font-size: 14px;
       }
       .main-nav__menu {
+        text-align: center;
         margin: 0;
-        padding: 0;
+        padding: 15px;
         list-style: none;
       }
       .main-nav__menu a {
         color: grey;
-
-        padding: 3px;
+        padding: 12px;
       }
 
-      /* .main-nav__menu--search::after,
-      .main-nav__menu--home::after,
-      .main-nav__menu--marketplace::after,
-      .main-nav__menu--pages::after,
-      .main-nav__menu__collections::after,
-      .main-nav__menu--Profile::after,
-      .main-nav__menu--Creator::after,
-      .main-nav__menu--Notification::after,
-      .main-nav__menu--Wallet::after,
-      .main-nav__menu--Profile::after {
-        content: "\2228";
-        color: grey;
-      } */
+      .main-nav__menu--home:hover {
+        color: beige;
+        border: 1px solid #121636;
+        border-radius: 17px;
+        text-align: right;
+      }
+
+      .main-nav__menu--search {
+        font-size: 19px;
+        font-weight: 100;
+        background-color: #ffffff1a;
+        border: 2px solid #121636;
+        border-radius: 17px;
+        padding: 5px;
+        text-align: left;
+        width: 200px;
+        height: 40px;
+      }
+      .main-nav__menu--search i {
+        color: violet;
+      }
 
       .main-nav__menu--search,
       .main-nav__menu--home,
@@ -65,83 +86,74 @@
       .main-nav__menu--Profile {
         display: inline-block;
       }
+      .main-nav__menu--Notification i {
+        content: "\e7f4";
+      }
+      .main-header__logo {
+        padding: 0px 35px;
+      }
+      .main-nav__menu__right {
+        display: inline-block;
+        padding-left: 150px;
+        text-align: right;
+      }
     </style>
   </head>
   <body>
     <header class="main-header">
-      <a href="#" class="main-header__logo">Bitakon</a>
       <nav class="main-nav">
         <ul class="main-nav__menu">
+          <img src="logo.png" class="main-header__logo" alt="logo" />
           <li class="main-nav__menu--search">
-            <a href="#" class="Search">Search</a>
             <i
-              class="fa fa-angle-down"
-              style="font-size: 20px; color: grey"
+              class="fa-solid fa-magnifying-glass"
+              style="font-size: 17px; color: violet"
             ></i>
+            <a href="#" class="Search">Search</a>
           </li>
           <li class="main-nav__menu--home">
             <a href="#">Home</a>
             <i
               class="fa fa-angle-down"
-              style="font-size: 20px; color: grey"
+              style="font-size: 17px; color: grey"
             ></i>
           </li>
           <li class="main-nav__menu--marketplace">
             <a href="#">Marketplace</a>
             <i
               class="fa fa-angle-down"
-              style="font-size: 20px; color: grey"
+              style="font-size: 17px; color: grey"
             ></i>
           </li>
           <li class="main-nav__menu--pages">
             <a href="#">Pages</a>
             <i
               class="fa fa-angle-down"
-              style="font-size: 20px; color: grey"
+              style="font-size: 17px; color: grey"
             ></i>
           </li>
           <li class="main-nav__menu__collections">
             <a href="#">Collections</a>
-            <i
-              class="fa fa-angle-down"
-              style="font-size: 20px; color: grey"
-            ></i>
           </li>
           <li class="main-nav__menu--Profile">
             <a href="#">Profile</a>
-            <i
-              class="fa fa-angle-down"
-              style="font-size: 20px; color: grey"
-            ></i>
           </li>
+
           <li class="main-nav__menu--Creator">
             <a href="#">Creators</a>
-            <i
-              class="fa fa-angle-down"
-              style="font-size: 20px; color: grey"
-            ></i>
           </li>
-          <li class="main-nav__menu--Notification">
-            <a href="#">bildirim logosu</a>
-            <i
-              class="fa fa-angle-down"
-              style="font-size: 20px; color: grey"
-            ></i>
-          </li>
-          <li class="main-nav__menu--Wallet">
-            <a href="#">Wallet</a>
-            <i
-              class="fa fa-angle-down"
-              style="font-size: 20px; color: grey"
-            ></i>
-          </li>
-          <li class="main-nav__menu--Profile">
-            <a href="#">Profile</a>
-            <i
-              class="fa fa-angle-down"
-              style="font-size: 20px; color: grey"
-            ></i>
-          </li>
+          <div class="main-nav__menu__right">
+            <li class="main-nav__menu--Notification">
+              <i class="fa-regular fa-bell"></i>
+              <a href="#"></a>
+            </li>
+            <li class="main-nav__menu--Wallet">
+              <a href="#">Wallet</a>
+            </li>
+            <li class="main-nav__menu--Profile">
+              <a href="#">Profile</a>
+            </li>
+          </div>
         </ul>
       </nav>
     </header>
