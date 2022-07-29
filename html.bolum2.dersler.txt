@@ -1,0 +1,168 @@
+13.07.2022
+
+1.Başlangıç
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Web Page</title>
+  </head>
+
+  <body>
+    <h1>My first web page</h1>
+  </body>
+</html>
+
+
+
+2.html biçimlendirme etiketleri
+ <body>
+    <!--html biçimlendirme etiketleri --> cntl+k+c yorum satırı oluşturabilirsin.
+
+    <p>
+      <b
+        >ipsum dolor sit amet <s>consectetur</s> , adipisicing elit. Tenetur.
+      </b>
+    </p>
+    <p>
+      <i> Lorem ipsum dolor sit amet <em> adipisicing</em> elit. Magni? </i>
+    </p>
+
+    <h1>
+      Lorem, ipsum dolor.
+      <small>Lorem, ipsum.</small>
+    </h1>
+
+    <p>
+      Lorem ipsum dolor <mark>amet </mark> consectetur adipisicing elit. Nihil.
+    </p>
+    <p>en sevdigim renk <del>mavi</del> <ins>kırmızı</ins>.</p>
+
+    <p>X <sub>2</sub></p>
+
+    <p>X <sup>2</sup></p>
+  </body>
+
+3.Header Tags
+ <body>
+    <h1>Lorem ipsum dolor sit.</h1>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <h3>Lorem ipsum dolor sit.</h3>
+    <h4>Lorem ipsum dolor sit.</h4>
+    <h5>Lorem ipsum dolor sit.</h5>
+    <h6>Lorem ipsum dolor sit.</h6>
+    <br /><br />
+
+    <h1>Migren Rahatsızlığı</h1>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+      exercitationem voluptate velit libero perferendis excepturi molestiae
+      maxime eaque corrupti. Harum ad ipsa voluptas rerum, dolores sapiente.
+      Deleniti itaque dolores eveniet?
+    </p>
+
+    <h2>Migren Belirtileri</h2>
+    <h2>Migren Tedavisi</h2>
+    <h3>İlaçla Tedavi</h3>
+    <h3>Botoksla Tedavi</h3>
+
+    <h2>Migren Çeşitleri</h2>
+  </body>
+
+4.Uygulama 1
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>En iyi filmler</title>
+  </head>
+
+  <body>
+    <h1>Tüm zamanların en iyi 100 filmi (En iyi film önerileri 2022)</h1>
+    <p>
+      <i>
+        <strong>IMDb tüm zamanların en iyi filmlerini sıraladık.</strong>
+        <strong>
+          İşte seyirci ve kullanıcıların oylarıyla belirlenen tüm zamanların en
+          iyi <mark>100</mark> filmi...</strong
+        ></i
+      >
+    </p>
+    <h2>1. Star wars</h2>
+    <p>
+      Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee
+      and two droids to save the galaxy from the Empire's world-destroying
+      battle station, while also attempting to rescue Princess Leia from the
+      mysterious Darth Vader.
+    </p>
+    <h2>2. Yüzüklerin Efendisi</h2>
+    <p>
+      Epic drama set thousands of years before the events of J.R.R. Tolkien's
+      'The Hobbit' and 'The Lord of the Rings' follows an ensemble cast of
+      characters, both familiar and new, as they confront the long-feared
+      re-emergence of evil to Middle-earth.
+    </p>
+    <h2>3. Esaretin Bedeli</h2>
+    <p>
+      Two imprisoned men bond over a number of years, finding solace and
+      eventual redemption through acts of common decency.
+    </p>
+  </body>
+</html>
+
+5. İmages
+<body>
+    <img src="images/983794168.jpg" alt="Kuscu" width="500px " />
+    <!-- bir üst dizine çıkmak için "../"" kodun başına bu yazılması lazım. -->
+    <img
+      src="https://images.pexels.com/photos/258109/pexels-photo-258109.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      alt="manzara"
+    />
+  </body>
+
+6.Links
+<body>
+    <a href="images.html">Resimler</a>
+    <a href="images/983794168.jpg">Resmi aç</a>
+    <!-- <a href="images.zip">Resmi indir</a> zipte ki resmi indirir direkt. 
+    target= "_blank" resmi ya da linki farklı sayfada açmaya yarıyor.-->
+    <a href="https://google.com" target="_blank">Google</a>
+    <a href="images/pexels-photo-302743.jpeg" target="_blank">
+      <img src="images/pexels-photo-302743.jpeg" alt="" width="100px" />
+    </a>
+    <a href="mailto:info@gmail.com">Mail Gönder</a>
+    <br /><br />
+
+    <a href="#bolum1">Bölüm 1</a>
+    <a href="#bolum2">Bölüm 2</a>
+
+    <h2 id="bolum1">Bölüm 1</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam reiciendis
+      fugit in praesentium est dolorem vero nam libero, deserunt voluptates non,
+      voluptatum sequi quis quam? Fuga maiores pariatur excepturi fugit.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam reiciendis
+      fugit in praesentium est dolorem vero nam libero, deserunt voluptates non,
+      voluptatum sequi quis quam? Fuga maiores pariatur excepturi fugit.
+    </p>
+
+    <h2 id="bolum2">Bölüm 2</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo nisi
+      necessitatibus, quo similique nobis doloribus blanditiis, tenetur fugit
+      repellat quam illum consequuntur et expedita corrupti praesentium
+      consequatur, illo ipsum. Sit.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo nisi
+      necessitatibus, quo similique nobis doloribus blanditiis, tenetur fugit
+      repellat quam illum consequuntur et expedita corrupti praesentium
+      consequatur, illo ipsum. Sit.
+    </p>
+  </body>

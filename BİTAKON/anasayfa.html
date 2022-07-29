@@ -6,19 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bitakon - NFT Marketplace Angular Template</title>
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <script
+      src="https://kit.fontawesome.com/50450b26b7.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@600&family=Roboto+Condensed&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -28,50 +26,49 @@
       }
       body {
         margin: 0;
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-family: "Roboto Condensed", sans-serif;
+        font-weight: 400;
       }
       .main-header {
-        background-color: #121636;
+        background-color: #0f1333;
         padding: 10px 15px;
         color: white;
       }
       .main-nav {
+        margin: 10px;
+        position: relative;
         display: inline-block;
-        width: calc(100% - 80px);
+        width: calc(100% - 20px);
+
         text-align: right;
-        font-size: 14px;
+        font-size: 16px;
       }
       .main-nav__menu {
+        background-color: #05092b;
         text-align: center;
+        position: fixed;
         margin: 0;
-        padding: 15px;
+        padding: 10 5px;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
         list-style: none;
       }
       .main-nav__menu a {
-        color: grey;
-        padding: 12px;
-      }
-
-      .main-nav__menu--home:hover {
-        color: beige;
-        border: 1px solid #121636;
-        border-radius: 17px;
-        text-align: right;
+        color: #a29fb6;
+        padding: 10px;
       }
 
       .main-nav__menu--search {
-        font-size: 19px;
-        font-weight: 100;
+        font-size: 18px;
         background-color: #ffffff1a;
         border: 2px solid #121636;
         border-radius: 17px;
-        padding: 5px;
+        padding: 3px 3px;
         text-align: left;
-        width: 200px;
-        height: 40px;
-      }
-      .main-nav__menu--search i {
-        color: violet;
+        width: 225px;
+        height: 35px;
       }
 
       .main-nav__menu--search,
@@ -80,22 +77,461 @@
       .main-nav__menu--pages,
       .main-nav__menu__collections,
       .main-nav__menu--Profile,
-      .main-nav__menu--Creator,
-      .main-nav__menu--Notification,
-      .main-nav__menu--Wallet,
-      .main-nav__menu--Profile {
+      .main-nav__menu--Creator {
         display: inline-block;
       }
-      .main-nav__menu--Notification i {
-        content: "\e7f4";
+      .main-nav__menu__right--Notification,
+      .main-nav__menu__right--Wallet,
+      .main-nav__menu__right--Profile {
+        display: inline;
+      }
+
+      .main-nav__menu--home i::after {
+        color: pink;
       }
       .main-header__logo {
         padding: 0px 35px;
       }
+      .main-nav__menu--home i::after {
+        display: inline-block;
+        border: 1px solid white;
+        color: white;
+        margin: 1px;
+        padding-left: 3px;
+        padding-top: 2px;
+      }
       .main-nav__menu__right {
+        position: relative;
+        margin: auto;
         display: inline-block;
         padding-left: 150px;
         text-align: right;
+      }
+      .main-nav__menu__right--Wallet {
+        color: white;
+        background-color: #336aed;
+        height: 45px;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+        border: 3px solid #336aed;
+        border-radius: 30px;
+        width: 125px;
+        padding: 9px 2px 9px 22px;
+      }
+      .main-nav__menu__right--Wallet:hover {
+        background-color: transparent;
+        border: 2px solid #336aed;
+      }
+      .main-nav__menu--marketplace i {
+        padding-right: 3px;
+      }
+      .main-nav__menu a:hover {
+        color: #3771fe;
+      }
+      .content-header {
+        background-color: #0f1333;
+      }
+
+      #box-1 {
+        width: 300px;
+        border: 15px solid green;
+        padding: 50px;
+        margin: 20px;
+        background-color: black;
+      }
+      .boxes {
+        background-color: #0f1333;
+        width: 100%;
+
+        display: inline-block;
+        padding-top: 100px;
+        width: calc(50%-20px);
+      }
+      .boxes__left {
+        display: inline-block;
+        width: 500px;
+        height: 500px;
+        background: url(https://ng-bitakon.netlify.app/assets/img/slider/slider-big-1.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid #0f1333;
+        border-radius: 12px;
+        margin-right: 20px;
+      }
+      .boxes__right {
+        display: inline-block;
+        width: 250px;
+        height: 250px;
+        background: url(https://ng-bitakon.netlify.app/assets/img/slider/slider-sm-1.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid #0f1333;
+        border-radius: 12px;
+        margin-right: 20px;
+      }
+      .boxes__left h2 {
+        color: white;
+        font-size: 30px;
+        letter-spacing: 1px;
+        padding-left: 35px;
+      }
+      .boxes__left p {
+        color: white;
+        padding-left: 35px;
+        margin: 0;
+      }
+      .col-1 {
+        width: 35%;
+      }
+      .col-1,
+      .col-2 {
+        display: inline-block;
+      }
+      .col-2 {
+        width: 45%;
+      }
+      .boxes__right__middle {
+        display: inline-block;
+        width: 250px;
+        height: 250px;
+        background: url(https://ng-bitakon.netlify.app/assets/img/slider/slider-sm-2.jpg);
+
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid #0f1333;
+        border-radius: 12px;
+        margin-right: 20px;
+      }
+      .boxes__right__right {
+        display: inline-block;
+        width: 250px;
+        height: 250px;
+        background: url(https://ng-bitakon.netlify.app/assets/img/slider/slider-sm-3.jpg);
+
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid #0f1333;
+        border-radius: 12px;
+      }
+      .boxes__right h2 {
+        color: white;
+        font-size: 20px;
+        letter-spacing: 1px;
+        padding-left: 14px;
+      }
+      .boxes__right p {
+        color: white;
+        padding-left: 15px;
+        margin: 0;
+      }
+      .boxes__right__middle h2 {
+        color: white;
+        font-size: 20px;
+        letter-spacing: 1px;
+        padding-left: 14px;
+      }
+      .boxes__right__middle p {
+        color: white;
+        padding-left: 15px;
+        margin: 0;
+      }
+      .boxes__right__right h2 {
+        color: white;
+        font-size: 20px;
+        letter-spacing: 1px;
+        padding-left: 14px;
+      }
+      .boxes__right__right p {
+        color: white;
+        padding-left: 15px;
+        margin: 0;
+      }
+
+      .boxes__right__down {
+        display: inline-block;
+        width: 250px;
+        height: 250px;
+        background: url(https://ng-bitakon.netlify.app/assets/img/slider/slider-sm-4.jpg);
+        padding-right: 15px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid #0f1333;
+        border-radius: 12px;
+        margin-right: 20px;
+      }
+      .boxes__right__middle--down {
+        display: inline-block;
+        width: 250px;
+        height: 250px;
+        background: url(https://ng-bitakon.netlify.app/assets/img/slider/slider-sm-5.jpg);
+        padding-right: 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid #0f1333;
+        border-radius: 12px;
+        margin-right: 20px;
+        margin-top: 15px;
+      }
+      .boxes__right__right--down {
+        display: inline-block;
+        width: 250px;
+        height: 250px;
+        background: url(https://ng-bitakon.netlify.app/assets/img/slider/slider-sm-6.jpg);
+        /* padding-right: 0; */
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid #0f1333;
+        border-radius: 12px;
+        /* margin-right: 25px; */
+      }
+      .boxes__right__down h2 {
+        color: white;
+        font-size: 20px;
+        letter-spacing: 1px;
+        padding-left: 14px;
+      }
+      .boxes__right__down p {
+        color: white;
+        padding-left: 15px;
+        margin: 0;
+      }
+      .boxes__right__middle--down h2 {
+        color: white;
+        font-size: 20px;
+        letter-spacing: 1px;
+        padding-left: 14px;
+      }
+      .boxes__right__middle--down p {
+        color: white;
+        padding-left: 15px;
+        margin: 0;
+      }
+      .boxes__right__right--down h2 {
+        color: white;
+        font-size: 20px;
+        letter-spacing: 1px;
+        padding-left: 14px;
+      }
+      .boxes__right__right--down p {
+        color: white;
+        padding-left: 15px;
+        margin: 0;
+      }
+      .popular {
+        width: 100%;
+        padding: 280px;
+        background-color: #05092b;
+      }
+      .populer-boxes__1,
+      .populer-boxes__2,
+      .populer-boxes__3,
+      .populer-boxes__4,
+      .populer-boxes__5,
+      .populer-boxes__6 {
+        display: inline-block;
+      }
+      .populer-boxes__1,
+      .populer-boxes__2,
+      .populer-boxes__3,
+      .populer-boxes__4,
+      .populer-boxes__5,
+      .populer-boxes__6 {
+        padding-left: 0;
+        padding-right: 20px;
+      }
+
+      .box-1,
+      .box-2,
+      .box-3,
+      .box-4,
+      .box-5,
+      .box-6 {
+        border: 1px solid #121636;
+        width: 200px;
+        height: 250px;
+        border-radius: 12px;
+      }
+      .box-1 img,
+      .box-2 img,
+      .box-3 img,
+      .box-4 img,
+      .box-5 img,
+      .box-6 img {
+        border-radius: 50%;
+      }
+      .box-1_2,
+      .box-2_2,
+      .box-3_2,
+      .box-4_2,
+      .box-5_2,
+      .box-6_2 {
+        background-color: #121636;
+        border: 1px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+      }
+      .box-1_2__left p,
+      .box-2_2__left p,
+      .box-3_2__left p,
+      .box-4_2__left p,
+      .box-5_2__left p,
+      .box-6_2__left p {
+        color: white;
+      }
+      .box-1_2__left,
+      .box-2_2__left,
+      .box-3_2__left,
+      .box-4_2__left,
+      .box-5_2__left,
+      .box-6_2__left {
+        padding-left: 22px;
+        padding-top: 9px;
+      }
+
+      .box-1_2__left,
+      .box-1_2__right,
+      .box-2_2__left,
+      .box-2_2__right,
+      .box-3_2__left,
+      .box-3_2__right,
+      .box-4_2__left,
+      .box-4_2__right,
+      .box-5_2__left,
+      .box-5_2__right,
+      .box-6_2__left,
+      .box-6_2__right {
+        display: inline-block;
+      }
+      .box-1_2__right,
+      .box-2_2__right,
+      .box-3_2__right,
+      .box-4_2__right,
+      .box-5_2__right,
+      .box-6_2__right {
+        padding-right: 22px;
+        padding-top: 22px;
+        float: right;
+      }
+      .box-1_3__middle,
+      .box-2_3__middle,
+      .box-3_3__middle,
+      .box-4_3__middle,
+      .box-5_3__middle,
+      .box-6_3__middle {
+        padding-top: 45px;
+        padding-left: 65px;
+        background-color: #05092b;
+      }
+      .box-1_4__down,
+      .box-2_4__down,
+      .box-3_4__down,
+      .box-4_4__down,
+      .box-5_4__down,
+      .box-6_4__down {
+        text-align: center;
+        padding: 10px;
+        background-color: #05092b;
+      }
+      .box-1_4__down h2,
+      .box-2_4__down h2,
+      .box-3_4__down h2,
+      .box-4_4__down h2,
+      .box-5_4__down h2,
+      .box-6_4__down h2 {
+        color: white;
+        font-weight: 400;
+        font-size: 18px;
+        font-display: center;
+      }
+      .box-1_4__down p {
+        color: #2a49b3;
+      }
+      .box-2_4__down p {
+        color: #3cb86c;
+      }
+      .box-3_4__down p {
+        color: #ff6838;
+      }
+      .box-4_4__down p {
+        color: #914eff;
+      }
+      .box-5_4__down p {
+        color: #ffa153;
+      }
+      .box-6_4__down p {
+        color: #fe5e78;
+      }
+      .first-p,
+      .second-p,
+      .first-p_2,
+      .second-p_2,
+      .first-p_3,
+      .second-p_3,
+      .first-p_4,
+      .second-p_4,
+      .first-p_5,
+      .second-p_5,
+      .first-p_6,
+      .second-p_6 {
+        display: inline-block;
+      }
+      .box-1_2__left_box {
+        text-align: center;
+        border: 1px solid #3771fe;
+        border-radius: 20px;
+        background-color: #3771fe;
+        padding: 10 5px;
+      }
+      .box-2_2__left_box {
+        text-align: center;
+        border: 1px solid #3cb86c;
+        border-radius: 20px;
+        background-color: #3cb86c;
+        padding: 10 5px;
+      }
+      .box-3_2__left_box {
+        text-align: center;
+        border: 1px solid #ff6838;
+        border-radius: 20px;
+        background-color: #ff6838;
+        padding: 10 5px;
+      }
+      .box-4_2__left_box {
+        text-align: center;
+        border: 1px solid #914eff;
+        border-radius: 20px;
+        background-color: #914eff;
+        padding: 10 5px;
+      }
+      .box-5_2__left_box {
+        text-align: center;
+        border: 1px solid #ffa153;
+        border-radius: 20px;
+        background-color: #ffa153;
+        padding: 10 5px;
+      }
+      .box-6_2__left_box {
+        text-align: center;
+        border: 1px solid #fe5e78;
+        border-radius: 20px;
+        background-color: #fe5e78;
+        padding: 10 5px;
+      }
+      .box-1:hover,
+      .box-2:hover,
+      .box-3:hover,
+      .box-4:hover,
+      .box-5:hover,
+      .box-6:hover {
+        border: 1px solid #336aed;
       }
     </style>
   </head>
@@ -105,31 +541,28 @@
         <ul class="main-nav__menu">
           <img src="logo.png" class="main-header__logo" alt="logo" />
           <li class="main-nav__menu--search">
-            <i
-              class="fa-solid fa-magnifying-glass"
-              style="font-size: 17px; color: violet"
-            ></i>
-            <a href="#" class="Search">Search</a>
+            <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
+            <!-- <input type="text" placeholder="Search" name="search" /> -->
           </li>
           <li class="main-nav__menu--home">
             <a href="#">Home</a>
             <i
               class="fa fa-angle-down"
-              style="font-size: 17px; color: grey"
+              style="font-size: 12px; color: grey"
             ></i>
           </li>
           <li class="main-nav__menu--marketplace">
-            <a href="#">Marketplace</a>
-            <i
+            <a href="#">Marketplace</a
+            ><i
               class="fa fa-angle-down"
-              style="font-size: 17px; color: grey"
+              style="font-size: 12px; color: grey"
             ></i>
           </li>
           <li class="main-nav__menu--pages">
-            <a href="#">Pages</a>
-            <i
+            <a href="#">Pages</a
+            ><i
               class="fa fa-angle-down"
-              style="font-size: 17px; color: grey"
+              style="font-size: 12px; color: grey"
             ></i>
           </li>
           <li class="main-nav__menu__collections">
@@ -143,20 +576,341 @@
             <a href="#">Creators</a>
           </li>
           <div class="main-nav__menu__right">
-            <li class="main-nav__menu--Notification">
-              <i class="fa-regular fa-bell"></i>
+            <li class="main-nav__menu__right--Notification">
+              <i class="material-icons">notifications</i>
               <a href="#"></a>
             </li>
-            <li class="main-nav__menu--Wallet">
-              <a href="#">Wallet</a>
+            <li class="main-nav__menu__right--Wallet">
+              <i
+                class="material-icons"
+                style="font-size: 16px; color: white"
+                id="walet"
+                >wallet</i
+              >
+              <a href="#" style="color: white">Wallet</a>
             </li>
-            <li class="main-nav__menu--Profile">
-              <a href="#">Profile</a>
+            <li class="main-nav__menu__right--Profile">
+              <img id="profile" src="user-removebg-preview.png" alt="profile" />
             </li>
           </div>
+          <hr />
         </ul>
       </nav>
     </header>
+    <main id="main-boxes">
+      <section id="boxes" class="boxes">
+        <div class="row">
+          <div class="col-1 boxes__left">
+            <h2>Get loud for boys</h2>
+            <p>PFP by Elizarevfx</p>
+          </div>
+          <div class="col-2">
+            <div class="col-3 boxes__right">
+              <h2>Get loud for boys</h2>
+              <p>PFP by Elizarevfx</p>
+            </div>
+            <div class="col-3 boxes__right__middle">
+              <h2>The Dark Jaegers</h2>
+              <p>Mamie Barnett</p>
+            </div>
+            <div class="col-3 boxes__right__right">
+              <h2>SitDown LOL</h2>
+              <p>Super Rare</p>
+            </div>
+
+            <div class="col-3 boxes__right__down">
+              <h2>The Dark Jaeger</h2>
+              <p>Munica Lucas</p>
+            </div>
+            <div class="col-3 boxes__right__middle--down">
+              <h2>Ave avatars 1.0</h2>
+              <p>Joss Sticks</p>
+            </div>
+            <div class="col-3 boxes__right__right--down">
+              <h2>Paper buddha t3</h2>
+              <p>NFT Paris</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popular">
+        <div class="populer-boxes">
+          <div class="populer-boxes__1">
+            <div class="box-1">
+              <div class="box-1_2">
+                <div class="box-1_2__left">
+                  <div class="box-1_2__left_box">
+                    <p>
+                      <i style="font-size: 14px; color: white" class="fas"
+                        >&#xf091;</i
+                      >
+                      #1
+                    </p>
+                  </div>
+                </div>
+                <div class="box-1_2__right">
+                  <span>
+                    <i class="far fa-plus-square" style="color: #a29fb6"></i>
+                    <!-- <i class="far fa-minus-square" id="minus"></i> -->
+                    <i class="fas fa-location-arrow" style="color: #a29fb6"></i>
+                  </span>
+                </div>
+
+                <div class="box-1_3">
+                  <div class="box-1_3__middle">
+                    <span>
+                      <img
+                        src="https://ng-bitakon.netlify.app/assets/img/seller/seller-1.jpg"
+                        alt=""
+                      />
+                    </span>
+                  </div>
+                  <div class="box-1_4">
+                    <div class="box-1_4__down">
+                      <h2>Robin Milford</h2>
+                      <div class="first-p">
+                        <p><i class="fab fa-ethereum"></i>00.74</p>
+                      </div>
+                      <div class="second-p">
+                        <p style="color: white">ETH</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="populer-boxes__2">
+            <div class="box-2">
+              <div class="box-2_2">
+                <div class="box-2_2__left">
+                  <div class="box-2_2__left_box">
+                    <p>
+                      <i style="font-size: 14px; color: white" class="fas"
+                        >&#xf091;</i
+                      >
+                      #1
+                    </p>
+                  </div>
+                </div>
+                <div class="box-2_2__right">
+                  <span>
+                    <i class="far fa-plus-square" style="color: #a29fb6"></i>
+                    <!-- <i class="far fa-minus-square" id="minus"></i> -->
+                    <i class="fas fa-location-arrow" style="color: #a29fb6"></i>
+                  </span>
+                </div>
+
+                <div class="box-2_3">
+                  <div class="box-2_3__middle">
+                    <span>
+                      <img
+                        src="https://ng-bitakon.netlify.app/assets/img/seller/seller-2.jpg"
+                        alt=""
+                      />
+                    </span>
+                  </div>
+                  <div class="box-2_4">
+                    <div class="box-2_4__down">
+                      <h2>Penny Tool</h2>
+                      <div class="first-p_2">
+                        <p><i class="fab fa-ethereum"></i>00.254</p>
+                      </div>
+                      <div class="second-p_2">
+                        <p style="color: white">ETH</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="populer-boxes__3">
+            <div class="box-3">
+              <div class="box-3_2">
+                <div class="box-3_2__left">
+                  <div class="box-3_2__left_box">
+                    <p>
+                      <i style="font-size: 14px; color: white" class="fas"
+                        >&#xf091;</i
+                      >
+                      #1
+                    </p>
+                  </div>
+                </div>
+                <div class="box-3_2__right">
+                  <span>
+                    <i class="far fa-plus-square" style="color: #a29fb6"></i>
+                    <!-- <i class="far fa-minus-square" id="minus"></i> -->
+                    <i class="fas fa-location-arrow" style="color: #a29fb6"></i>
+                  </span>
+                </div>
+
+                <div class="box-3_3">
+                  <div class="box-3_3__middle">
+                    <span>
+                      <img
+                        src="https://ng-bitakon.netlify.app/assets/img/seller/seller-3.jpg"
+                        alt=""
+                      />
+                    </span>
+                  </div>
+                  <div class="box-3_4">
+                    <div class="box-3_4__down">
+                      <h2>Robin Milford</h2>
+                      <div class="first-p_3">
+                        <p><i class="fab fa-ethereum"></i>00.20</p>
+                      </div>
+                      <div class="second-p_3">
+                        <p style="color: white">ETH</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="populer-boxes__4">
+            <div class="box-4">
+              <div class="box-4_2">
+                <div class="box-4_2__left">
+                  <div class="box-4_2__left_box">
+                    <p>
+                      <i style="font-size: 14px; color: white" class="fas"
+                        >&#xf091;</i
+                      >
+                      #1
+                    </p>
+                  </div>
+                </div>
+                <div class="box-4_2__right">
+                  <span>
+                    <i class="far fa-plus-square" style="color: #a29fb6"></i>
+                    <!-- <i class="far fa-minus-square" id="minus"></i> -->
+                    <i class="fas fa-location-arrow" style="color: #a29fb6"></i>
+                  </span>
+                </div>
+
+                <div class="box-4_3">
+                  <div class="box-4_3__middle">
+                    <span>
+                      <img
+                        src="https://ng-bitakon.netlify.app/assets/img/seller/seller-4.jpg"
+                        alt=""
+                      />
+                    </span>
+                  </div>
+                  <div class="box-4_4">
+                    <div class="box-4_4__down">
+                      <h2>Robin Milford</h2>
+                      <div class="first-p_4">
+                        <p><i class="fab fa-ethereum"></i>00.74</p>
+                      </div>
+                      <div class="second-p_4">
+                        <p style="color: white">ETH</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="populer-boxes__5">
+            <div class="box-5">
+              <div class="box-5_2">
+                <div class="box-5_2__left">
+                  <div class="box-5_2__left_box">
+                    <p>
+                      <i style="font-size: 14px; color: white" class="fas"
+                        >&#xf091;</i
+                      >
+                      #1
+                    </p>
+                  </div>
+                </div>
+                <div class="box-5_2__right">
+                  <span>
+                    <i class="far fa-plus-square" style="color: #a29fb6"></i>
+                    <!-- <i class="far fa-minus-square" id="minus"></i> -->
+                    <i class="fas fa-location-arrow" style="color: #a29fb6"></i>
+                  </span>
+                </div>
+
+                <div class="box-5_3">
+                  <div class="box-5_3__middle">
+                    <span>
+                      <img
+                        src="https://ng-bitakon.netlify.app/assets/img/seller/seller-5.jpg"
+                        alt=""
+                      />
+                    </span>
+                  </div>
+                  <div class="box-5_4">
+                    <div class="box-5_4__down">
+                      <h2>Robin Milford</h2>
+                      <div class="first-p_5">
+                        <p><i class="fab fa-ethereum"></i>00.74</p>
+                      </div>
+                      <div class="second-p_5">
+                        <p style="color: white">ETH</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="populer-boxes__6">
+            <div class="box-6">
+              <div class="box-6_2">
+                <div class="box-6_2__left">
+                  <div class="box-6_2__left_box">
+                    <p>
+                      <i style="font-size: 14px; color: white" class="fas"
+                        >&#xf091;</i
+                      >
+                      #1
+                    </p>
+                  </div>
+                </div>
+                <div class="box-6_2__right">
+                  <span>
+                    <i class="far fa-plus-square" style="color: #a29fb6"></i>
+                    <!-- <i class="far fa-minus-square" id="minus"></i> -->
+                    <i class="fas fa-location-arrow" style="color: #a29fb6"></i>
+                  </span>
+                </div>
+
+                <div class="box-6_3">
+                  <div class="box-6_3__middle">
+                    <span>
+                      <img
+                        src="https://ng-bitakon.netlify.app/assets/img/seller/seller-6.jpg"
+                        alt=""
+                      />
+                    </span>
+                  </div>
+                  <div class="box-6_4">
+                    <div class="box-6_4__down">
+                      <h2>Robin Milford</h2>
+                      <div class="first-p_6">
+                        <p><i class="fab fa-ethereum"></i>00.78</p>
+                      </div>
+                      <div class="second-p_6">
+                        <p style="color: white">ETH</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
   <footer></footer>
 </html>
