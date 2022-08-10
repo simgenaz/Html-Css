@@ -1,0 +1,33 @@
+/* html,body{
+            height: 100%;
+            hem html hem body için kullanılması gereken sabit yükseklik değeri bulunuyor bunu bu şekilde yazabiliriz
+         */
+body {
+    margin: 0;
+
+}
+
+#header {
+    position: relative;
+
+    background-color: red;
+    background-image: url(images/bg.jpg);
+    height: 50vh;
+    /* viewport - heigt:  kullanıcın görmüş olduğu yüksekliği ... kapla */
+    width: 80vw;
+    /* view - width: görünen alanın yüzde 80 ini almaks */
+}
+
+#header h1 {
+    margin: 0;
+    position: absolute;
+    /* position absolute dediğimizde akış dışına çıkar.  */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* transform translate dediğimiz de normalde h1 etiketinin ilk harfinden 
+            ortalandığı için bunu kullandığımızda h1 etiketinin ortası neresiyse oradan ortalar */
+    font-size: 80px;
+    color: red;
+
+}
