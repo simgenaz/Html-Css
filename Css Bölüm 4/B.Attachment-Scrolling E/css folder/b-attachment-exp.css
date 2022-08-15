@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+}
+.bg{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg-image1{
+    background-image: url(../İmages/four-american-curl-kittens-with-twisted-ears-isolated-black-background-sergey-taran.jpg);
+    height: 100vh;
+}
+.bg-image2{
+    background-image: url(../İmages/laughing-kitten-sergey-taran.jpg);
+    height: 50vh;
+    background-position: top;
+}
+.caption{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+.caption .border{
+    background-color: grey;
+    color: black;
+    padding: 1px;
+    font-size: 35px;
+    letter-spacing: 5px;
+}
+.box{
+    color: grey;
+    background-color: black;
+    text-align: center;
+    padding: 25px 70px;
+    
+}
