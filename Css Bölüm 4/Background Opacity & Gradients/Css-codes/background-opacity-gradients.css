@@ -1,0 +1,68 @@
+        /* html,body{
+            height: 100%;
+            hem html hem body için kullanılması gereken sabit yükseklik değeri bulunuyor bunu bu şekilde yazabiliriz
+         */
+        body {
+            margin: 0;
+        }
+
+        #header {
+            position: relative;
+            background-image:
+                /* linear-gradient(to bottom right, rgba(230, 255, 230, 0.7), rgba(102, 255, 102, 0.7)), */
+                url(../İmages/bg.jpg);
+            height: 100vh;
+
+        }
+
+        #header h1 {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            font-size: 80px;
+            color: red;
+
+        }
+
+        .cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #00ff99;
+            opacity: 0.2;
+        }
+
+        .logo {
+            position: absolute;
+            /* absolute olunca akış dışına çıkmış oluyor  */
+            top: 30px;
+            left: 30px;
+            width: 70px;
+            /* top-left -> sol üste konumlandırıp ölçüsünü widthle ayarladık. */
+        }
+
+        /* background-opacity-gradients first exp  start */
+         #header{
+            /* background-image: linear-gradient(to right,rgba(123,155,123,0.5),rgba(156,100,156,0.5))
+            ,url(../İmages/bg.jpg); */
+            /* rgba kullanırsak hem opacityi hem de renkleri kullanmış oluruz ve headerın içindekiler etkilenmemiş olur. */
+
+
+            background-image: linear-gradient(to left, #00ff99, #00fff0);
+            /* eğer opacityi ayrı yazarsak header kısmında ne varsa hepsine opacity uygular */
+            /* opacity: 0.3; */
+
+         }
+         /* background-opacity-gradients first exp finish */
+
+         /* background-opacity-gradients second exp  start */
+         #header{
+            background-image: linear-gradient(to bottom left,rgba(120,145,145,0.6),rgba(156,100,156,0.5));
+
+         }
+         /* background-opacity-gradients second exp finish */
