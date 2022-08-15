@@ -1,0 +1,61 @@
+       body {
+           margin: 0;
+       }
+
+       #header {
+           position: relative;
+           background-image:
+               url(../İmages/bg.jpg);
+           height: 100vh;
+           background-position: center;
+
+           background-repeat: no-repeat;
+           background-size: cover;
+           clip-path: polygon(0 0, 100% 0, 100% 100%, 19% 81%);
+           /* google clip path yazıp ilk çıkan sayfadan diğer tarz şekillere ulaşabiliriz */
+
+       }
+
+       #header h1 {
+           margin: 0;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           font-size: 80px;
+           color: red;
+       }
+
+
+
+       .logo {
+           position: absolute;
+           top: 30px;
+           left: 30px;
+           width: 70px;
+       }
+
+       /* clip path exp 1 start */
+       #hea {
+           background-image: url(../İmages/bg-2.jpeg);
+           height: 100vh;
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+           clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+
+       }
+
+       /* clip path exp 1 finish */
+       /* clip path exp 2 start */
+       #he {
+           background-image: url(../İmages/bg-3.jpeg);
+           height: 50vh;
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+           clip-path: polygon(50% 0%, 100% 38%, 62% 69%, 18% 100%, 0% 38%);
+
+       }
+
+       /* clip path exp 2 finish */
