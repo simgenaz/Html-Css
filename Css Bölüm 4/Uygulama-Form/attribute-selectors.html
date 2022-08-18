@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Attribyte selector */
+        /* a[target]{
+    background-color: red;
+}
+a[class]{
+    background-color: blue;
+ }/* bu a etiketindeki class a ulaşır */
+
+        /* [class]{
+    background-color: blue;
+}sayfa üzerinde class tanımlanmış elemanlara ulaşır ama burada classı aktif olan value eklememiz gerekiyor */
+
+        /* [class="active"] {
+            background-color: blue;
+        } */
+
+
+
+        /* Attribute value selector */
+        /* a[class="active"] {
+            background-color: blue;
+        }         burada class elamanındaki active olanı bul demek artı olarak a[class="active"] yaparsak a elamının clasının active olanını etkiler. */
+
+
+        /* Attribute '*' selector --  "*" koymak classta farklı isimler bile olsa active geçen hepsini etkiler kelime başka kelimeyle birleşik olsa bile */
+        /* [class*="active"] {
+            background-color: blue;
+        }
+         */
+        /* Attribute '~' selector -- '~' koymak active isimli classları etkile ama eğer active-span yazarsa etkilemez*/
+        /* [class~="active"] {
+            background-color: blue;
+        } */
+
+        /* Attribute '|' selector */ /*  | -- ilgili value bilgisi sadece başlangıçta olucak yani active en başta olması gerekiyor arada bir boşluk kabul etmez */
+
+       /* [class|="active"] { 
+            background-color: blue;
+        } */
+
+        /* Attribute '^' selector -- ^ active sınıfıyla başlicak ve active sınıfına sahip olan elemanları seçim yapar arada boşluk olmamasına bakmıyor . */ 
+
+        /* [class^="active"] {  
+            background-color: blue;
+        } */
+
+        /* Attribute '$' selector active sınıfı sonda olmalı */
+
+        [class$="active"] {  
+            background-color: blue;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <span class="active-span text">text</span>
+
+
+    <nav>
+        <a href="" target="_blank">Home</a>
+        <a href="" class="active">About</a>
+        <a href="" class="link">Contact</a>
+    </nav>
+
+</body>
+
+</html>
