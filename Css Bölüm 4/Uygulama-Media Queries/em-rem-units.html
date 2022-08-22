@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #kutu-1 {
+            font-size: 20px;
+        }
+        #kutu-1 p{
+            font-size: 1.5em;
+            /* bu durumda kapsayıcı olan elamanın 1.5 katını alıyor tarayıcıda ki 1em yi ezip 1.5em ye dönüşür*/
+        /* padding: 1em; */
+        /* paddinge 1em versekte burada font-size a 1.5em dediğimiz için o baskın gelip padding değerini de o şekilde ölçücektik. 
+        } */
+
+        /* ----------------------- */
+        /* alt kısımda font size ı belirledik html sayfasındaki her yazı 10px ama kapsayıcılara 2rem veya 3 rem dediğimizde 
+         2*10px le p etiketi 20px 3*10px le h2 etiketini 30px yapmış olduk. */
+        /* html {
+            font-size: 10px;
+        }
+
+         #kutu-1 p {
+            font-size: 2rem;
+        }
+
+        #kutu-1 h2 {
+            font-size: 3rem;
+        } */
+        /* ---------------------- */
+        /* html ye bu değeri tanımladığımızda normalde 16px olan değer artık 10px oluyor 
+            tarayıcıda yazı tipi boyutunu kullanıcı değiştirsede biz html etiketine
+            10px olarak ayarladğımız için sabit bir değer olarak kalır.
+            değiştirmesi için sitenin ekranın küçültüp büyütmesi gerekir.
+        */
+        html {
+            /* font-size: 10px; */
+            /* yüzdelik hali--> 62.5% 10px le eşittir. yüzde olarak tanımladığımızda 
+            yazı boyutu değiştirildiğinde bizim sabitlediğimiz yazı boyutuda değişmektedir.
+            */
+            font-size: 62.5%;
+        }
+        body{
+            /* burada html nin 10px olan değeri body etiketi 16px olarak ayarlanır. */
+            font-size: 1.5rem;
+        }
+        @media(min-width:576px) {
+
+            html {
+                font-size: 11px;
+            }
+            #kutu-1 h2{
+                font-size: 1.8rem;
+            }
+        }
+        @media(min-width:768px) {
+
+            html {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="kutu-1">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores illum qui magni earum a, aperiam ipsum
+            exercitationem officia cum sequi. Sapiente sunt rem corrupti unde impedit mollitia in dolorem amet.</p>
+    </div>
+    <div id="kutu-2">
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores illum qui magni earum a, aperiam ipsum
+            exercitationem officia cum sequi. Sapiente sunt rem corrupti unde impedit mollitia in dolorem amet.</p>
+    </div>
+
+
+
+</body>
+
+</html>
