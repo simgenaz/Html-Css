@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            /* eğer bunları yatayda sıralamak istersek  */
+            /* justify-content: center; */
+            /* justify-content: flex-start; */
+            /* justify-content: flex-end; */
+
+            /* elemanların arasında boşluk yaratabiliriz */
+            /* justify-content: space-around; yüzdelik değerle boşluk bırakılır. */
+            /* justify-content: space-between; aradaki boşluklar eşit şekilde bırakılır. */
+            /* justify-content: space-evenly;  her yerden ortak bir boşluk bırakılır. */
+            /* bunlar yataydaki sıralamansıydı. yükseklik verirsek kutuları uzatır.  */
+
+            /* dikeyde vericeğimiz özellikse;  */
+            /* align-items: stretch; */
+                /* align-items: flex-start; bütün elemanlar içerik kadar yer kaplar ve satırın en üstüne gelmiş olur */
+            /* align-items: flex-end; yüksekliğin en altına gelmiş olur */
+            /* align-items: center; ortaya gelmiş olur */
+
+            height: 500px;
+            background-color: #034f84;
+            /* padding: 15px; */
+        }
+
+        .item {
+            background-color: #f7786b;
+            padding: 30px;
+            /* margin: 20px; */
+            color: #fff;
+            font-size: 25px;
+        }
+        /* first exp start */
+        .container1{
+            height: 350px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #034f84;
+        }
+         /* first exp end */
+
+          /* second exp start */
+        .container2{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-end;
+            justify-content: space-evenly;
+            height: 400px;
+            background-color: #034f84;
+        }
+                  /* second exp finish */
+
+
+    </style>
+</head>
+<body>
+    
+
+<div class="container">
+    <div class="item">item 1</div>
+    <div class="item">item 2</div>
+    <div class="item">item 3</div>
+    <div class="item">item 4</div>
+
+</div>
+<div class="container1">
+    <div class="item">item 1</div>
+    <div class="item">item 2</div>
+    <div class="item">item 3</div>
+    <div class="item">item 4</div>
+
+</div>
+<div class="container2">
+    <div class="item">item 1</div>
+    <div class="item">item 2</div>
+    <div class="item">item 3</div>
+    <div class="item">item 4</div>
+
+</div>
+
+
+</body>
+</html>
