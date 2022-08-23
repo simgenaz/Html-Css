@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* flex-grow:1 yaptığımızda hangisine uygularsak 
+        tüm itemlara uygularsak tüm hepsi olan alanı
+        eşit bir şekilde paylaşır.tüm itemda kullanmak
+        istediğimiz de 0 haricinde bir değer girmemiz gerekir.
+        sadece bir tanesine uygularsak alanın tamamını kaplayıp
+        geri kalanlar normal halde kalır. 
+        bir itema 2 diğerine 1 verirsek 2 ye 1 oranda paylaşırlar.
+        
+        */
+
+
+        .container{
+            display: flex;
+
+            height: 500px;
+            background-color: #034f84;
+          
+        }
+
+        .item {
+            background-color: #f7786b;
+            padding: 30px;
+            margin: 20px;
+            color: #fff;
+            font-size: 25px;
+
+            flex: 0 0 200px; /* (grow,shrink,basis) */
+
+
+        }
+        .item-1{
+            order: 1;
+            /* order: sıralamalarını ayarlamak için kullanılır. */
+
+            flex: 25%;
+            /* genişlikleri sadece flex özelliğiyle de dağıtabiliriz. */
+
+            /* flex-grow: 2; */
+
+        }
+        .item-2{
+            order: 3;
+
+            flex-grow: 1;
+
+        }
+        .item-3{
+            order: 2;
+
+            flex-basis: 200px;
+            flex-shrink: 0;
+            /* flex-shrink: 200px alanı tutmak istiyorsak 0 değerini
+            kullanarak onu sabit kullanabiliriz alanı küçültüp büyültsek 
+            bile bu 200px altına da üstüne de çıkmayacaktır. */
+
+        }
+        .item-4{
+            flex-grow: 1;
+
+        }
+       
+
+    </style>
+</head>
+<body>
+    
+
+<div class="container">
+    <div class="item item-1">item 1</div>
+    <div class="item item-2">item 2</div>
+    <div class="item item-3">item 3</div>
+    <div class="item item-4">item 4</div>
+
+</div>
+
+
+
+</body>
+</html>
