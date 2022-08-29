@@ -121,6 +121,15 @@
 .flex-columns .column{
     flex: 1;
 }
+
+.flex-columns.article .column:nth-child(odd){
+    flex: 2;
+}
+.flex-columns.article .column:nth-child(even){
+    flex: 3;
+}
+
+
 .flex-columns .column .column-1 ,
 .flex-columns .column .column-2 {
     height: 100%;
@@ -183,4 +192,22 @@
 }
 .card-body{
     padding: 2rem;
+}
+
+/* mobile */
+
+@media (max-width :768px){
+    .flex-items{
+        flex-direction: column;
+    }
+    .flex-columns .column{
+        flex: 100% !important;
+    }
+    .flex-items > div{
+        padding: 10px;
+    }
+    .flex-grid .column{
+        flex: 50%;
+    
+    }
 }
